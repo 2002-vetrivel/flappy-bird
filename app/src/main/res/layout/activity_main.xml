@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/floppy_background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.example.flappybird.GameView
+        android:id="@+id/gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/txt_minito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flappy Bird"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/btn_start"
+        android:layout_margin="50dp"
+        android:textColor="#fff"/>
+
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/txt_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="60sp"
+        android:text="0"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap To Play"
+        android:padding="5dp"
+        android:layout_centerInParent="true"
+        android:background="#000"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/txt_develop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Developed by @Vetri"
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"/>
+
+    <RelativeLayout
+        android:id="@+id/r1_game_over"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/txt_game_over"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Game Over"
+            android:textColor="#FF3629"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/txt_score_over"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="0"
+            android:textColor="#FF3629"
+            android:textSize="100sp" />
+
+        <TextView
+            android:id="@+id/txt_best_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_score_over"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="best: 0"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_game_over"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Touch screen to continues!"
+            android:textColor="#000"
+            android:textSize="20sp" />
+    </RelativeLayout>
+</RelativeLayout>
